@@ -32,15 +32,5 @@ class DemoView2Tests {
     
     #expect(imagesMatch)
   }
-  
-  @Test(.tags(.generation)) func `DemoView2 Output`() async throws {
-
-    let view = DemoView2()
-    
-    let generator = Generator(configuration: self.configuration)
-    
-    let output = URL(fileURLWithPath: #file).deletingLastPathComponent().deletingLastPathComponent().appendingPathComponent("Output/DemoView2.png")
-    let _ = try await generator.generate(from: view, write: output)
-  }
 
 }

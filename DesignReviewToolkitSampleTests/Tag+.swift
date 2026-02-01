@@ -6,5 +6,4 @@ import Testing
 
 extension Tag {
   @Tag static var diff: Self
-  @Tag static var generation: Self
 }

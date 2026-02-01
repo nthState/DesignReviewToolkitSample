@@ -64,7 +64,7 @@ public struct DemoView2: View {
 
 
       // Accessible button alternatives to swiping
-      if let currentGame = games.first {
+      if let _ = games.first {
         HStack(spacing: 40) {
           Button(action: { }) {
             VStack {

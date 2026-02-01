@@ -12,7 +12,7 @@ class DemoView3Tests {
   
   let testingBundle = Bundle(for: DemoView3Tests.self)
   let configuration: Configuration
-  let isRecording: Bool = true
+  let isRecording: Bool = false
 
   init() throws {
     self.configuration = Configuration(showStyle: true)
@@ -33,13 +33,5 @@ class DemoView3Tests {
     #expect(imagesMatch)
   }
   
-  @Test(.tags(.generation)) func `DemoView3 Output`() async throws {
-
-    let view = DemoView3()
-    
-    let generator = Generator(configuration: self.configuration)
-    
-    let output = URL(fileURLWithPath: #file).deletingLastPathComponent().deletingLastPathComponent().appendingPathComponent("Output/DemoView3.png")
-    let _ = try await generator.generate(from: view, write: output)
-  }
 }
+
