@@ -160,7 +160,7 @@ struct GameCard: View {
           .font(.subheadline)
           .foregroundStyle(.secondary)
           .fixedSize(horizontal: false, vertical: true)
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.text: "\"\\(game.genre) • \\(game.platform)\""], style: [DesignReviewToolkit.StyleType.font: ".subheadline", DesignReviewToolkit.StyleType.foregroundStyle: ".secondary"], depth: 2))
+.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.text: "\"\\(game.genre) • \\(game.platform)\""], style: [DesignReviewToolkit.StyleType.foregroundStyle: ".secondary", DesignReviewToolkit.StyleType.font: ".subheadline"], depth: 2))
 
 
         Text(game.shortDescription)
@@ -168,7 +168,7 @@ struct GameCard: View {
           .foregroundStyle(.primary)
           .fixedSize(horizontal: false, vertical: true)
           .lineLimit(dynamicTypeSize.isAccessibilitySize ? nil : 3)
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.text: "game.shortDescription"], style: [DesignReviewToolkit.StyleType.font: ".body", DesignReviewToolkit.StyleType.foregroundStyle: ".primary"], depth: 2))
+.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.text: "game.shortDescription"], style: [DesignReviewToolkit.StyleType.foregroundStyle: ".primary", DesignReviewToolkit.StyleType.font: ".body"], depth: 2))
 
 
         HStack(spacing: 4) {
@@ -207,7 +207,7 @@ struct GameCard: View {
     .accessibilityLabel("\(game.title), \(game.genre) on \(game.platform). \(game.shortDescription). Rated \(game.rating) out of 5 stars.")
     .accessibilityHint("Swipe right to like, swipe left to skip, or use the Like and Skip buttons below.")
     .accessibilityAddTraits(.isButton)
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.accessibilityElement: ".ignore", DesignReviewToolkit.AccessibilityType.accessibilityLabel: "\"\\(game.title), \\(game.genre) on \\(game.platform). \\(game.shortDescription). Rated \\(game.rating) out of 5 stars.\"", DesignReviewToolkit.AccessibilityType.accessibilityHint: "\"Swipe right to like, swipe left to skip, or use the Like and Skip buttons below.\"", DesignReviewToolkit.AccessibilityType.accessibilityAddTraits: ".isButton"], style: [DesignReviewToolkit.StyleType.background: "RoundedRectangle(cornerRadius: 24, style: .continuous)\n        .fill(Color(uiColor: .secondarySystemBackground))\n        .shadow(radius: 6, y: 4)", DesignReviewToolkit.StyleType.padding: "8"], depth: 0))
+.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.accessibilityAddTraits: ".isButton", DesignReviewToolkit.AccessibilityType.accessibilityElement: ".ignore", DesignReviewToolkit.AccessibilityType.accessibilityLabel: "\"\\(game.title), \\(game.genre) on \\(game.platform). \\(game.shortDescription). Rated \\(game.rating) out of 5 stars.\"", DesignReviewToolkit.AccessibilityType.accessibilityHint: "\"Swipe right to like, swipe left to skip, or use the Like and Skip buttons below.\""], style: [DesignReviewToolkit.StyleType.background: "RoundedRectangle(cornerRadius: 24, style: .continuous)\n        .fill(Color(uiColor: .secondarySystemBackground))\n        .shadow(radius: 6, y: 4)", DesignReviewToolkit.StyleType.padding: "8"], depth: 0))
 
 
   }
@@ -227,7 +227,7 @@ struct TagLabel: View {
       .background(text == "LIKE" ? Color.green.opacity(0.8) : Color.red.opacity(0.8))
       .foregroundColor(.white)
       .clipShape(Capsule())
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.text: "text"], style: [DesignReviewToolkit.StyleType.background: "text == \"LIKE\" ? Color.green.opacity(0.8) : Color.red.opacity(0.8)", DesignReviewToolkit.StyleType.font: ".headline.weight(.bold)", DesignReviewToolkit.StyleType.padding: "8"], depth: 0))
+.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.text: "text"], style: [DesignReviewToolkit.StyleType.font: ".headline.weight(.bold)", DesignReviewToolkit.StyleType.padding: "8", DesignReviewToolkit.StyleType.background: "text == \"LIKE\" ? Color.green.opacity(0.8) : Color.red.opacity(0.8)"], depth: 0))
 
 
   }
@@ -250,7 +250,7 @@ struct NoMoreGamesView: View {
       Text("You've reached the end of the deck.")
         .font(.subheadline)
         .foregroundStyle(.secondary)
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.text: "\"You\'ve reached the end of the deck.\""], style: [DesignReviewToolkit.StyleType.font: ".subheadline", DesignReviewToolkit.StyleType.foregroundStyle: ".secondary"], depth: 1))
+.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.text: "\"You\'ve reached the end of the deck.\""], style: [DesignReviewToolkit.StyleType.foregroundStyle: ".secondary", DesignReviewToolkit.StyleType.font: ".subheadline"], depth: 1))
 
 
     }

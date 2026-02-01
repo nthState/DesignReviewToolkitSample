@@ -76,14 +76,14 @@ public struct DemoView3: View {
           .padding(8)
           .background(.black.opacity(0.4))
           .clipShape(Circle())
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [:], style: [DesignReviewToolkit.StyleType.font: ".title2.weight(.semibold)", DesignReviewToolkit.StyleType.padding: "8", DesignReviewToolkit.StyleType.background: ".black.opacity(0.4)"], depth: 2))
+.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [:], style: [DesignReviewToolkit.StyleType.background: ".black.opacity(0.4)", DesignReviewToolkit.StyleType.padding: "8", DesignReviewToolkit.StyleType.font: ".title2.weight(.semibold)"], depth: 2))
 
 
       }
       .accessibilityLabel("Back")
       .accessibilityHint("Go back to the previous screen.")
       .accessibilitySortPriority(1)
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.accessibilitySortPriority: "1", DesignReviewToolkit.AccessibilityType.accessibilityLabel: "\"Back\"", DesignReviewToolkit.AccessibilityType.accessibilityHint: "\"Go back to the previous screen.\""], style: [:], depth: 1))
+.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.accessibilitySortPriority: "1", DesignReviewToolkit.AccessibilityType.accessibilityHint: "\"Go back to the previous screen.\"", DesignReviewToolkit.AccessibilityType.accessibilityLabel: "\"Back\""], style: [:], depth: 1))
 
 
       Spacer()
@@ -96,7 +96,7 @@ public struct DemoView3: View {
           .padding(8)
           .background(.black.opacity(0.4))
           .clipShape(Circle())
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [:], style: [DesignReviewToolkit.StyleType.font: ".title2", DesignReviewToolkit.StyleType.padding: "8", DesignReviewToolkit.StyleType.background: ".black.opacity(0.4)"], depth: 2))
+.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [:], style: [DesignReviewToolkit.StyleType.font: ".title2", DesignReviewToolkit.StyleType.background: ".black.opacity(0.4)", DesignReviewToolkit.StyleType.padding: "8"], depth: 2))
 
 
       }
@@ -114,7 +114,7 @@ public struct DemoView3: View {
           .padding(8)
           .background(.black.opacity(0.4))
           .clipShape(Circle())
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [:], style: [DesignReviewToolkit.StyleType.background: ".black.opacity(0.4)", DesignReviewToolkit.StyleType.font: ".title2", DesignReviewToolkit.StyleType.padding: "8"], depth: 2))
+.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [:], style: [DesignReviewToolkit.StyleType.padding: "8", DesignReviewToolkit.StyleType.font: ".title2", DesignReviewToolkit.StyleType.background: ".black.opacity(0.4)"], depth: 2))
 
 
       }
@@ -172,7 +172,7 @@ public struct DemoView3: View {
     .accessibilityValue(isLiked ? "On" : "Off")
     .accessibilityHint("Double-tap to toggle like.")
     .accessibilitySortPriority(1)
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.accessibilityValue: "isLiked ? \"On\" : \"Off\"", DesignReviewToolkit.AccessibilityType.accessibilityHint: "\"Double-tap to toggle like.\"", DesignReviewToolkit.AccessibilityType.accessibilitySortPriority: "1", DesignReviewToolkit.AccessibilityType.accessibilityLabel: "\"Like video\""], style: [:], depth: 0))
+.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.accessibilitySortPriority: "1", DesignReviewToolkit.AccessibilityType.accessibilityValue: "isLiked ? \"On\" : \"Off\"", DesignReviewToolkit.AccessibilityType.accessibilityLabel: "\"Like video\"", DesignReviewToolkit.AccessibilityType.accessibilityHint: "\"Double-tap to toggle like.\""], style: [:], depth: 0))
 
 
   }
@@ -199,7 +199,7 @@ public struct DemoView3: View {
     .accessibilityValue(isDisliked ? "On" : "Off")
     .accessibilityHint("Double-tap to toggle dislike.")
     .accessibilitySortPriority(2)
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.accessibilitySortPriority: "2", DesignReviewToolkit.AccessibilityType.accessibilityLabel: "\"Dislike video\"", DesignReviewToolkit.AccessibilityType.accessibilityHint: "\"Double-tap to toggle dislike.\"", DesignReviewToolkit.AccessibilityType.accessibilityValue: "isDisliked ? \"On\" : \"Off\""], style: [:], depth: 0))
+.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.accessibilityLabel: "\"Dislike video\"", DesignReviewToolkit.AccessibilityType.accessibilityHint: "\"Double-tap to toggle dislike.\"", DesignReviewToolkit.AccessibilityType.accessibilityValue: "isDisliked ? \"On\" : \"Off\"", DesignReviewToolkit.AccessibilityType.accessibilitySortPriority: "2"], style: [:], depth: 0))
 
 
   }
@@ -247,7 +247,7 @@ public struct DemoView3: View {
     }
     .accessibilityLabel("Share video")
     .accessibilityHint("Double-tap to share this video.")
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.accessibilityLabel: "\"Share video\"", DesignReviewToolkit.AccessibilityType.accessibilityHint: "\"Double-tap to share this video.\""], style: [:], depth: 0))
+.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.accessibilityHint: "\"Double-tap to share this video.\"", DesignReviewToolkit.AccessibilityType.accessibilityLabel: "\"Share video\""], style: [:], depth: 0))
 
 
   }
@@ -305,7 +305,7 @@ public struct DemoView3: View {
             .background(isSubscribed ? .gray.opacity(0.6) : .white)
             .foregroundColor(isSubscribed ? .white : .black)
             .clipShape(Capsule())
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.text: "isSubscribed ? \"Subscribed\" : \"Subscribe\""], style: [DesignReviewToolkit.StyleType.padding: "6", DesignReviewToolkit.StyleType.background: "isSubscribed ? .gray.opacity(0.6) : .white", DesignReviewToolkit.StyleType.font: ".subheadline.bold()"], depth: 3))
+.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.text: "isSubscribed ? \"Subscribed\" : \"Subscribe\""], style: [DesignReviewToolkit.StyleType.padding: "6", DesignReviewToolkit.StyleType.font: ".subheadline.bold()", DesignReviewToolkit.StyleType.background: "isSubscribed ? .gray.opacity(0.6) : .white"], depth: 3))
 
 
         }
@@ -327,7 +327,7 @@ public struct DemoView3: View {
           .font(.caption)
           .foregroundStyle(.secondary)
           .lineLimit(1)
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.text: "\"How to create re-usable glass effect components\""], style: [DesignReviewToolkit.StyleType.foregroundStyle: ".secondary", DesignReviewToolkit.StyleType.font: ".caption"], depth: 2))
+.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.text: "\"How to create re-usable glass effect components\""], style: [DesignReviewToolkit.StyleType.font: ".caption", DesignReviewToolkit.StyleType.foregroundStyle: ".secondary"], depth: 2))
 
 
       }
@@ -359,7 +359,7 @@ public struct DemoView3: View {
       .ignoresSafeArea(edges: .bottom)
     )
     .accessibilityElement(children: .contain)
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.accessibilityElement: ".contain"], style: [DesignReviewToolkit.StyleType.padding: "4", DesignReviewToolkit.StyleType.background: "LinearGradient(\n        colors: [Color.black.opacity(0.6), .clear],\n        startPoint: .bottom,\n        endPoint: .top\n      )\n      .ignoresSafeArea(edges: .bottom)"], depth: 0))
+.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.accessibilityElement: ".contain"], style: [DesignReviewToolkit.StyleType.background: "LinearGradient(\n        colors: [Color.black.opacity(0.6), .clear],\n        startPoint: .bottom,\n        endPoint: .top\n      )\n      .ignoresSafeArea(edges: .bottom)", DesignReviewToolkit.StyleType.padding: "4"], depth: 0))
 
 
   }

@@ -1,3 +1,6 @@
+#
+#  Copyright © nthState Ltd. 2026. All rights reserved.
+#
 
 .PHONY: help
 help:

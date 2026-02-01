@@ -4,7 +4,7 @@
 
 import SwiftUI
 import Testing
-import DesignReviewKitSample
+import DesignReviewToolkitSample
 import DesignReviewToolkit
 
 @MainActor
@@ -12,10 +12,10 @@ class DemoView2Tests {
   
   let testingBundle = Bundle(for: DemoView2Tests.self)
   let configuration: Configuration
-  let isRecording: Bool = false
+  let isRecording: Bool = true
 
   init() throws {
-    self.configuration = try Configuration(showStyle: true)
+    self.configuration = Configuration(showStyle: true)
   }
 
   @Test(.tags(.diff)) func `DemoView2 Annotated`() async throws {

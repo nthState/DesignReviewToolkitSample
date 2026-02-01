@@ -1,17 +1,14 @@
 //
-//  DesignReviewToolkitSampleApp.swift
-//  DesignReviewToolkitSample
-//
-//  Created by Chris Davis on 01/02/2026.
+//  Copyright © nthState Ltd. 2026. All rights reserved.
 //
 
 import SwiftUI
 
 @main
 struct DesignReviewToolkitSampleApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  var body: some Scene {
+    WindowGroup {
+      DemoView1()
     }
+  }
 }

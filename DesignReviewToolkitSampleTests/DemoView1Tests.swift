@@ -4,7 +4,7 @@
 
 import SwiftUI
 import Testing
-import DesignReviewKitSample
+import DesignReviewToolkitSample
 import DesignReviewToolkit
 
 @MainActor
@@ -12,10 +12,10 @@ class DemoView1Tests {
   
   let testingBundle = Bundle(for: DemoView1Tests.self)
   let configuration: Configuration
-  let isRecording: Bool = false
+  let isRecording: Bool = true
 
   init() throws {
-    self.configuration = try Configuration(showStyle: true)
+    self.configuration = Configuration(showStyle: true)
   }
 
   @Test(.tags(.diff)) func `DemoView1 Annotated`() async throws {
@@ -40,9 +40,7 @@ class DemoView1Tests {
     let generator = Generator(configuration: self.configuration)
     
     let output = URL(fileURLWithPath: #file).deletingLastPathComponent().deletingLastPathComponent().appendingPathComponent("Output/DemoView1.png")
-    let image = try await generator.generate(from: view, write: output)
-    
-    let a = 1
+    let _ = try await generator.generate(from: view, write: output)
   }
 
 }

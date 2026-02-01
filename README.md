@@ -1,4 +1,6 @@
-# DesignReviewKit Sample App
+# DesignReviewToolkit Sample App
 
-The DemoViews were generated using AI, they serve purely as examples
-of what the DesignReviewKit can currently process.
+This is a sample repo that uses [DesignReviewToolkit](https://github.com/nthState/DesignReviewToolkit)
+to generate design review images from SwiftUI views.
+
+For more information, please see [DesignReviewToolkit Swift Package](https://github.com/nthState/DesignReviewToolkit)

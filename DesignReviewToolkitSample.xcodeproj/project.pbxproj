@@ -10,6 +10,8 @@
 		67B3CBBD2F2F9C8500BDBEDF /* DesignReviewToolkit in Frameworks */ = {isa = PBXBuildFile; productRef = 67B3CBBC2F2F9C8500BDBEDF /* DesignReviewToolkit */; };
 		67B3CBBF2F2F9C8500BDBEDF /* DesignReviewToolkitCLI in Frameworks */ = {isa = PBXBuildFile; productRef = 67B3CBBE2F2F9C8500BDBEDF /* DesignReviewToolkitCLI */; };
 		67B3CBC22F2F9C8B00BDBEDF /* DesignReviewToolkit in Frameworks */ = {isa = PBXBuildFile; productRef = 67B3CBC12F2F9C8B00BDBEDF /* DesignReviewToolkit */; };
+		67B3CBC52F2F9CFF00BDBEDF /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 67B3CBC32F2F9CFF00BDBEDF /* Makefile */; };
+		67B3CBC62F2F9CFF00BDBEDF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 67B3CBC42F2F9CFF00BDBEDF /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		67B3CB722F2F9C2400BDBEDF /* DesignReviewToolkitSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignReviewToolkitSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67B3CB7F2F2F9C2500BDBEDF /* DesignReviewToolkitSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesignReviewToolkitSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		67B3CBC32F2F9CFF00BDBEDF /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		67B3CBC42F2F9CFF00BDBEDF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -64,6 +68,8 @@
 		67B3CB692F2F9C2400BDBEDF = {
 			isa = PBXGroup;
 			children = (
+				67B3CBC32F2F9CFF00BDBEDF /* Makefile */,
+				67B3CBC42F2F9CFF00BDBEDF /* README.md */,
 				67B3CB742F2F9C2400BDBEDF /* DesignReviewToolkitSample */,
 				67B3CB822F2F9C2500BDBEDF /* DesignReviewToolkitSampleTests */,
 				67B3CBC02F2F9C8B00BDBEDF /* Frameworks */,
@@ -185,6 +191,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67B3CBC62F2F9CFF00BDBEDF /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67B3CBC52F2F9CFF00BDBEDF /* Makefile in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

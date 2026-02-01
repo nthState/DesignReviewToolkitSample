@@ -81,7 +81,7 @@ public struct DemoView1: View {
       .background(.background)
       .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
       .padding(.horizontal)
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [:], style: [DesignReviewToolkit.StyleType.padding: ".horizontal", DesignReviewToolkit.StyleType.background: ".background"], depth: 1))
+.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [:], style: [DesignReviewToolkit.StyleType.background: ".background", DesignReviewToolkit.StyleType.padding: ".horizontal"], depth: 1))
 
 
     }
@@ -123,7 +123,7 @@ struct TopStoryCard: View {
           .background(.ultraThinMaterial)
           .clipShape(Capsule())
           .accessibilityLabel(article.category)
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.accessibilityLabel: "article.category", DesignReviewToolkit.AccessibilityType.text: "article.category"], style: [DesignReviewToolkit.StyleType.background: ".ultraThinMaterial", DesignReviewToolkit.StyleType.padding: "4", DesignReviewToolkit.StyleType.font: ".caption.weight(.semibold)"], depth: 2))
+.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.accessibilityLabel: "article.category", DesignReviewToolkit.AccessibilityType.text: "article.category"], style: [DesignReviewToolkit.StyleType.font: ".caption.weight(.semibold)", DesignReviewToolkit.StyleType.background: ".ultraThinMaterial", DesignReviewToolkit.StyleType.padding: "4"], depth: 2))
 
 
         Text(article.title)
@@ -136,14 +136,14 @@ struct TopStoryCard: View {
           .font(.subheadline)
           .foregroundStyle(.secondary)
           .lineLimit(dynamicTypeSize.isAccessibilitySize ? nil : 2)
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.text: "article.subtitle"], style: [DesignReviewToolkit.StyleType.font: ".subheadline", DesignReviewToolkit.StyleType.foregroundStyle: ".secondary"], depth: 2))
+.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.text: "article.subtitle"], style: [DesignReviewToolkit.StyleType.foregroundStyle: ".secondary", DesignReviewToolkit.StyleType.font: ".subheadline"], depth: 2))
 
 
         Text(article.timeAgo)
           .font(.caption)
           .foregroundStyle(.secondary)
           .padding(.top, 4)
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.text: "article.timeAgo"], style: [DesignReviewToolkit.StyleType.foregroundStyle: ".secondary", DesignReviewToolkit.StyleType.padding: "4", DesignReviewToolkit.StyleType.font: ".caption"], depth: 2))
+.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.text: "article.timeAgo"], style: [DesignReviewToolkit.StyleType.font: ".caption", DesignReviewToolkit.StyleType.foregroundStyle: ".secondary", DesignReviewToolkit.StyleType.padding: "4"], depth: 2))
 
 
       }
@@ -159,7 +159,7 @@ struct TopStoryCard: View {
     .accessibilityLabel("\(article.category), \(article.title). \(article.subtitle). \(article.timeAgo). Top story.")
     .accessibilityHint("Double-tap to open this top story.")
     .accessibilityAddTraits(.isButton)
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.accessibilityLabel: "\"\\(article.category), \\(article.title). \\(article.subtitle). \\(article.timeAgo). Top story.\"", DesignReviewToolkit.AccessibilityType.accessibilityHint: "\"Double-tap to open this top story.\"", DesignReviewToolkit.AccessibilityType.accessibilityElement: ".ignore", DesignReviewToolkit.AccessibilityType.accessibilityAddTraits: ".isButton"], style: [DesignReviewToolkit.StyleType.padding: ".horizontal"], depth: 0))
+.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.accessibilityHint: "\"Double-tap to open this top story.\"", DesignReviewToolkit.AccessibilityType.accessibilityLabel: "\"\\(article.category), \\(article.title). \\(article.subtitle). \\(article.timeAgo). Top story.\"", DesignReviewToolkit.AccessibilityType.accessibilityAddTraits: ".isButton", DesignReviewToolkit.AccessibilityType.accessibilityElement: ".ignore"], style: [DesignReviewToolkit.StyleType.padding: ".horizontal"], depth: 0))
 
 
   }
@@ -186,7 +186,7 @@ struct ArticleRow: View {
           .foregroundStyle(.secondary)
           .textCase(.uppercase)
           .accessibilityLabel(article.category)
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.text: "article.category", DesignReviewToolkit.AccessibilityType.accessibilityLabel: "article.category"], style: [DesignReviewToolkit.StyleType.foregroundStyle: ".secondary", DesignReviewToolkit.StyleType.font: ".caption.weight(.semibold)"], depth: 2))
+.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.text: "article.category", DesignReviewToolkit.AccessibilityType.accessibilityLabel: "article.category"], style: [DesignReviewToolkit.StyleType.font: ".caption.weight(.semibold)", DesignReviewToolkit.StyleType.foregroundStyle: ".secondary"], depth: 2))
 
 
         Text(article.title)
@@ -199,14 +199,14 @@ struct ArticleRow: View {
           .font(.subheadline)
           .foregroundStyle(.secondary)
           .lineLimit(2)
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.text: "article.subtitle"], style: [DesignReviewToolkit.StyleType.font: ".subheadline", DesignReviewToolkit.StyleType.foregroundStyle: ".secondary"], depth: 2))
+.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.text: "article.subtitle"], style: [DesignReviewToolkit.StyleType.foregroundStyle: ".secondary", DesignReviewToolkit.StyleType.font: ".subheadline"], depth: 2))
 
 
         Text(article.timeAgo)
           .font(.caption)
           .foregroundStyle(.secondary)
           .padding(.top, 2)
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.text: "article.timeAgo"], style: [DesignReviewToolkit.StyleType.padding: "2", DesignReviewToolkit.StyleType.foregroundStyle: ".secondary", DesignReviewToolkit.StyleType.font: ".caption"], depth: 2))
+.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.text: "article.timeAgo"], style: [DesignReviewToolkit.StyleType.foregroundStyle: ".secondary", DesignReviewToolkit.StyleType.font: ".caption", DesignReviewToolkit.StyleType.padding: "2"], depth: 2))
 
 
       }
@@ -219,7 +219,7 @@ struct ArticleRow: View {
     .accessibilityLabel("\(article.category). \(article.title). \(article.subtitle). \(article.timeAgo).")
     .accessibilityHint("Double-tap to open this article.")
     .accessibilityAddTraits(.isButton)
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.accessibilityLabel: "\"\\(article.category). \\(article.title). \\(article.subtitle). \\(article.timeAgo).\"", DesignReviewToolkit.AccessibilityType.accessibilityAddTraits: ".isButton", DesignReviewToolkit.AccessibilityType.accessibilityHint: "\"Double-tap to open this article.\"", DesignReviewToolkit.AccessibilityType.accessibilityElement: ".ignore"], style: [DesignReviewToolkit.StyleType.padding: "16"], depth: 0))
+.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.accessibilityLabel: "\"\\(article.category). \\(article.title). \\(article.subtitle). \\(article.timeAgo).\"", DesignReviewToolkit.AccessibilityType.accessibilityAddTraits: ".isButton", DesignReviewToolkit.AccessibilityType.accessibilityElement: ".ignore", DesignReviewToolkit.AccessibilityType.accessibilityHint: "\"Double-tap to open this article.\""], style: [DesignReviewToolkit.StyleType.padding: "16"], depth: 0))
 
 
   }
