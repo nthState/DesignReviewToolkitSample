@@ -10,7 +10,7 @@ import DesignReviewToolkit
 @MainActor
 class DemoView1Tests {
   
-  let testingBundle = Bundle(for: DemoView1Tests.self)
+  let testingRoot = URL(fileURLWithPath: "/Users/chrisdavis/Developer/DesignReviewToolkitSample/DesignFilesOutput")
   let configuration: Configuration
   let isRecording: Bool = false
 
@@ -24,11 +24,11 @@ class DemoView1Tests {
     
     let generator = Generator(configuration: self.configuration)
     
-    let temp: URL? = isRecording ? FileManager.default.temporaryDirectory.appending(path: "DemoView1.png") : nil
+    let temp: URL? = isRecording ? testingRoot.appending(path: "DemoView1.png") : nil
     let image = try await generator.generate(from: view, write: temp)
     
-    let comparisonImageURL = try #require(testingBundle.url(forResource: "DemoView1", withExtension: "png"), "Couldn't find png")
-    let imagesMatch = try await generator.isVisuallyEqual(image, to: comparisonImageURL)
+    let comparisonImageURL = testingRoot.appending(path: "DemoView1.png")
+    let imagesMatch = try await generator.hasMatchingData(image, to: comparisonImageURL)
     
     #expect(imagesMatch)
   }
@@ -39,7 +39,7 @@ class DemoView1Tests {
     
     let generator = Generator(configuration: .init(showStyle: false, includeAccessibility: [accessibility], convergeLines: true))
     
-    let temp: URL? = isRecording ? FileManager.default.temporaryDirectory.appending(path: "DemoView1.png") : nil
+    let temp: URL? = isRecording ? testingRoot.appending(path: "DemoView1.png") : nil
     let image = try await generator.generate(from: view, write: temp)
 
     #expect(image.width > 0 && image.height > 0)
