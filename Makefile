@@ -8,7 +8,7 @@ help:
 	@echo "make help             - Show help"
 	@echo "make run              - Create screenshots"
 
-# This is an example of running DesignReviewToolkit DesignReviewToolkit
+# This is an example of running DesignReviewToolkit CLI
 .PHONY: run
 run:
   #	git clone https://github.com/nthState/DesignReviewToolkit.git
