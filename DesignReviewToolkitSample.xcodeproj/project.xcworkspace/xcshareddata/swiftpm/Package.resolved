@@ -1,6 +1,15 @@
 {
-  "originHash" : "f6718ce9c7e9419fcf017cf4ab3a8f73e124b103883c25dc1ad0db1b7893bbde",
+  "originHash" : "96bd5af6ab8480a5e783bc384727ee30f99c82ec248c06ff6c5a641af7763abd",
   "pins" : [
+    {
+      "identity" : "designreviewtoolkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/nthState/DesignReviewToolkit",
+      "state" : {
+        "revision" : "f9ec922f094e9fe76b445f1ada8ad569d9e7a7bc",
+        "version" : "0.0.1"
+      }
+    },
     {
       "identity" : "swift-argument-parser",
       "kind" : "remoteSourceControl",

@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		677B12842F3242CB00EF1713 /* DesignReviewToolkit in Frameworks */ = {isa = PBXBuildFile; productRef = 677B12832F3242CB00EF1713 /* DesignReviewToolkit */; };
+		677B12862F3242CB00EF1713 /* DesignReviewToolkitCLI in Frameworks */ = {isa = PBXBuildFile; productRef = 677B12852F3242CB00EF1713 /* DesignReviewToolkitCLI */; };
+		677B12882F3242D600EF1713 /* DesignReviewToolkit in Frameworks */ = {isa = PBXBuildFile; productRef = 677B12872F3242D600EF1713 /* DesignReviewToolkit */; };
 		67B3CBBD2F2F9C8500BDBEDF /* DesignReviewToolkit in Frameworks */ = {isa = PBXBuildFile; productRef = 67B3CBBC2F2F9C8500BDBEDF /* DesignReviewToolkit */; };
 		67B3CBBF2F2F9C8500BDBEDF /* DesignReviewToolkitCLI in Frameworks */ = {isa = PBXBuildFile; productRef = 67B3CBBE2F2F9C8500BDBEDF /* DesignReviewToolkitCLI */; };
-		67B3CBC22F2F9C8B00BDBEDF /* DesignReviewToolkit in Frameworks */ = {isa = PBXBuildFile; productRef = 67B3CBC12F2F9C8B00BDBEDF /* DesignReviewToolkit */; };
 		67B3CBC52F2F9CFF00BDBEDF /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 67B3CBC32F2F9CFF00BDBEDF /* Makefile */; };
 		67B3CBC62F2F9CFF00BDBEDF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 67B3CBC42F2F9CFF00BDBEDF /* README.md */; };
 /* End PBXBuildFile section */
@@ -49,8 +51,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				677B12862F3242CB00EF1713 /* DesignReviewToolkitCLI in Frameworks */,
 				67B3CBBF2F2F9C8500BDBEDF /* DesignReviewToolkitCLI in Frameworks */,
 				67B3CBBD2F2F9C8500BDBEDF /* DesignReviewToolkit in Frameworks */,
+				677B12842F3242CB00EF1713 /* DesignReviewToolkit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67B3CBC22F2F9C8B00BDBEDF /* DesignReviewToolkit in Frameworks */,
+				677B12882F3242D600EF1713 /* DesignReviewToolkit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +119,8 @@
 			packageProductDependencies = (
 				67B3CBBC2F2F9C8500BDBEDF /* DesignReviewToolkit */,
 				67B3CBBE2F2F9C8500BDBEDF /* DesignReviewToolkitCLI */,
+				677B12832F3242CB00EF1713 /* DesignReviewToolkit */,
+				677B12852F3242CB00EF1713 /* DesignReviewToolkitCLI */,
 			);
 			productName = DesignReviewToolkitSample;
 			productReference = 67B3CB722F2F9C2400BDBEDF /* DesignReviewToolkitSample.app */;
@@ -138,7 +144,7 @@
 			);
 			name = DesignReviewToolkitSampleTests;
 			packageProductDependencies = (
-				67B3CBC12F2F9C8B00BDBEDF /* DesignReviewToolkit */,
+				677B12872F3242D600EF1713 /* DesignReviewToolkit */,
 			);
 			productName = DesignReviewToolkitSampleTests;
 			productReference = 67B3CB7F2F2F9C2500BDBEDF /* DesignReviewToolkitSampleTests.xctest */;
@@ -173,7 +179,7 @@
 			mainGroup = 67B3CB692F2F9C2400BDBEDF;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				67B3CBBB2F2F9C8500BDBEDF /* XCLocalSwiftPackageReference "../DesignReviewToolkit" */,
+				677B12822F3242CB00EF1713 /* XCRemoteSwiftPackageReference "DesignReviewToolkit" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 67B3CB732F2F9C2400BDBEDF /* Products */;
@@ -494,14 +500,33 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		67B3CBBB2F2F9C8500BDBEDF /* XCLocalSwiftPackageReference "../DesignReviewToolkit" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = ../DesignReviewToolkit;
+/* Begin XCRemoteSwiftPackageReference section */
+		677B12822F3242CB00EF1713 /* XCRemoteSwiftPackageReference "DesignReviewToolkit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nthState/DesignReviewToolkit";
+			requirement = {
+				kind = exactVersion;
+				version = 0.0.1;
+			};
 		};
-/* End XCLocalSwiftPackageReference section */
+/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		677B12832F3242CB00EF1713 /* DesignReviewToolkit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 677B12822F3242CB00EF1713 /* XCRemoteSwiftPackageReference "DesignReviewToolkit" */;
+			productName = DesignReviewToolkit;
+		};
+		677B12852F3242CB00EF1713 /* DesignReviewToolkitCLI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 677B12822F3242CB00EF1713 /* XCRemoteSwiftPackageReference "DesignReviewToolkit" */;
+			productName = DesignReviewToolkitCLI;
+		};
+		677B12872F3242D600EF1713 /* DesignReviewToolkit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 677B12822F3242CB00EF1713 /* XCRemoteSwiftPackageReference "DesignReviewToolkit" */;
+			productName = DesignReviewToolkit;
+		};
 		67B3CBBC2F2F9C8500BDBEDF /* DesignReviewToolkit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = DesignReviewToolkit;
@@ -509,11 +534,6 @@
 		67B3CBBE2F2F9C8500BDBEDF /* DesignReviewToolkitCLI */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = DesignReviewToolkitCLI;
-		};
-		67B3CBC12F2F9C8B00BDBEDF /* DesignReviewToolkit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 67B3CBBB2F2F9C8500BDBEDF /* XCLocalSwiftPackageReference "../DesignReviewToolkit" */;
-			productName = DesignReviewToolkit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
