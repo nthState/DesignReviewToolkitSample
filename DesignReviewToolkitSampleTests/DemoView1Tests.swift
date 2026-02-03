@@ -12,7 +12,7 @@ class DemoView1Tests {
   
   let testingBundle = Bundle(for: DemoView1Tests.self)
   let configuration: Configuration
-  let isRecording: Bool = true
+  let isRecording: Bool = false
 
   init() throws {
     self.configuration = Configuration(showStyle: true)
@@ -31,6 +31,18 @@ class DemoView1Tests {
     let imagesMatch = try await generator.isVisuallyEqual(image, to: comparisonImageURL)
     
     #expect(imagesMatch)
+  }
+  
+  @Test(.tags(.run_manually), arguments: AccessibilityType.allCases) func `DemoView1 Generate`(_ accessibility: AccessibilityType) async throws {
+
+    let view = DemoView1()
+    
+    let generator = Generator(configuration: .init(showStyle: false, includeAccessibility: [accessibility], convergeLines: true))
+    
+    let temp: URL? = isRecording ? FileManager.default.temporaryDirectory.appending(path: "DemoView1.png") : nil
+    let image = try await generator.generate(from: view, write: temp)
+
+    #expect(image.width > 0 && image.height > 0)
   }
   
 }

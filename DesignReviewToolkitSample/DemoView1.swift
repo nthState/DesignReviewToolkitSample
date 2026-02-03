@@ -1,4 +1,3 @@
-import DesignReviewToolkit // Dynamic
 //
 //  Copyright © nthState Ltd. 2026. All rights reserved.
 //
@@ -66,8 +65,6 @@ public struct DemoView1: View {
         .font(.title.bold())
         .padding(.horizontal)
         .accessibilityAddTraits(.isHeader)
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.accessibilityAddTraits: ".isHeader", DesignReviewToolkit.AccessibilityType.text: "\"Today\""], style: [DesignReviewToolkit.StyleType.font: ".title.bold()", DesignReviewToolkit.StyleType.padding: ".horizontal"], depth: 1))
-
 
       VStack(spacing: 0) {
         ForEach(articles.filter { !$0.isTopStory }) { article in
@@ -81,13 +78,9 @@ public struct DemoView1: View {
       .background(.background)
       .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
       .padding(.horizontal)
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [:], style: [DesignReviewToolkit.StyleType.background: ".background", DesignReviewToolkit.StyleType.padding: ".horizontal"], depth: 1))
-
 
     }
     .padding(.vertical)
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [:], style: [DesignReviewToolkit.StyleType.padding: ".vertical"], depth: 0))
-
 
   }
 }
@@ -111,8 +104,6 @@ struct TopStoryCard: View {
           )
         )
         .accessibilityHidden(true) // decorative
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.accessibilityHidden: "true"], style: [DesignReviewToolkit.StyleType.fill: ".blue.opacity(0.8)"], depth: 1))
-
 
       VStack(alignment: .leading, spacing: 8) {
         Text(article.category)
@@ -123,28 +114,20 @@ struct TopStoryCard: View {
           .background(.ultraThinMaterial)
           .clipShape(Capsule())
           .accessibilityLabel(article.category)
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.accessibilityLabel: "article.category", DesignReviewToolkit.AccessibilityType.text: "article.category"], style: [DesignReviewToolkit.StyleType.font: ".caption.weight(.semibold)", DesignReviewToolkit.StyleType.background: ".ultraThinMaterial", DesignReviewToolkit.StyleType.padding: "4"], depth: 2))
-
 
         Text(article.title)
           .font(.system(dynamicTypeSize.isAccessibilitySize ? .title2 : .title, design: .default).bold())
           .fixedSize(horizontal: false, vertical: true)
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.text: "article.title"], style: [DesignReviewToolkit.StyleType.font: ".system(dynamicTypeSize.isAccessibilitySize ? .title2 : .title, design: .default).bold()"], depth: 2))
-
 
         Text(article.subtitle)
           .font(.subheadline)
           .foregroundStyle(.secondary)
           .lineLimit(dynamicTypeSize.isAccessibilitySize ? nil : 2)
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.text: "article.subtitle"], style: [DesignReviewToolkit.StyleType.foregroundStyle: ".secondary", DesignReviewToolkit.StyleType.font: ".subheadline"], depth: 2))
-
 
         Text(article.timeAgo)
           .font(.caption)
           .foregroundStyle(.secondary)
           .padding(.top, 4)
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.text: "article.timeAgo"], style: [DesignReviewToolkit.StyleType.font: ".caption", DesignReviewToolkit.StyleType.foregroundStyle: ".secondary", DesignReviewToolkit.StyleType.padding: "4"], depth: 2))
-
 
       }
       
@@ -159,8 +142,6 @@ struct TopStoryCard: View {
     .accessibilityLabel("\(article.category), \(article.title). \(article.subtitle). \(article.timeAgo). Top story.")
     .accessibilityHint("Double-tap to open this top story.")
     .accessibilityAddTraits(.isButton)
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.accessibilityHint: "\"Double-tap to open this top story.\"", DesignReviewToolkit.AccessibilityType.accessibilityLabel: "\"\\(article.category), \\(article.title). \\(article.subtitle). \\(article.timeAgo). Top story.\"", DesignReviewToolkit.AccessibilityType.accessibilityAddTraits: ".isButton", DesignReviewToolkit.AccessibilityType.accessibilityElement: ".ignore"], style: [DesignReviewToolkit.StyleType.padding: ".horizontal"], depth: 0))
-
 
   }
 }
@@ -177,8 +158,6 @@ struct ArticleRow: View {
         .fill(.gray.opacity(0.2))
         .frame(width: 80, height: 80)
         .accessibilityHidden(true) // decorative
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.accessibilityHidden: "true"], style: [DesignReviewToolkit.StyleType.fill: ".gray.opacity(0.2)"], depth: 1))
-
 
       VStack(alignment: .leading, spacing: 4) {
         Text(article.category)
@@ -186,28 +165,20 @@ struct ArticleRow: View {
           .foregroundStyle(.secondary)
           .textCase(.uppercase)
           .accessibilityLabel(article.category)
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.text: "article.category", DesignReviewToolkit.AccessibilityType.accessibilityLabel: "article.category"], style: [DesignReviewToolkit.StyleType.font: ".caption.weight(.semibold)", DesignReviewToolkit.StyleType.foregroundStyle: ".secondary"], depth: 2))
-
 
         Text(article.title)
           .font(.headline)
           .fixedSize(horizontal: false, vertical: true)
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.text: "article.title"], style: [DesignReviewToolkit.StyleType.font: ".headline"], depth: 2))
-
 
         Text(article.subtitle)
           .font(.subheadline)
           .foregroundStyle(.secondary)
           .lineLimit(2)
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.text: "article.subtitle"], style: [DesignReviewToolkit.StyleType.foregroundStyle: ".secondary", DesignReviewToolkit.StyleType.font: ".subheadline"], depth: 2))
-
 
         Text(article.timeAgo)
           .font(.caption)
           .foregroundStyle(.secondary)
           .padding(.top, 2)
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.text: "article.timeAgo"], style: [DesignReviewToolkit.StyleType.foregroundStyle: ".secondary", DesignReviewToolkit.StyleType.font: ".caption", DesignReviewToolkit.StyleType.padding: "2"], depth: 2))
-
 
       }
       
@@ -219,8 +190,6 @@ struct ArticleRow: View {
     .accessibilityLabel("\(article.category). \(article.title). \(article.subtitle). \(article.timeAgo).")
     .accessibilityHint("Double-tap to open this article.")
     .accessibilityAddTraits(.isButton)
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.accessibilityLabel: "\"\\(article.category). \\(article.title). \\(article.subtitle). \\(article.timeAgo).\"", DesignReviewToolkit.AccessibilityType.accessibilityAddTraits: ".isButton", DesignReviewToolkit.AccessibilityType.accessibilityElement: ".ignore", DesignReviewToolkit.AccessibilityType.accessibilityHint: "\"Double-tap to open this article.\""], style: [DesignReviewToolkit.StyleType.padding: "16"], depth: 0))
-
 
   }
 }

@@ -1,4 +1,3 @@
-import DesignReviewToolkit // Dynamic
 //
 //  Copyright © nthState Ltd. 2026. All rights reserved.
 //
@@ -57,8 +56,6 @@ public struct DemoView3: View {
       }
       .padding(.horizontal, 8)
       .padding(.bottom, 8)
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [:], style: [DesignReviewToolkit.StyleType.padding: "8"], depth: 1))
-
 
     }
 
@@ -76,15 +73,11 @@ public struct DemoView3: View {
           .padding(8)
           .background(.black.opacity(0.4))
           .clipShape(Circle())
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [:], style: [DesignReviewToolkit.StyleType.background: ".black.opacity(0.4)", DesignReviewToolkit.StyleType.padding: "8", DesignReviewToolkit.StyleType.font: ".title2.weight(.semibold)"], depth: 2))
-
 
       }
       .accessibilityLabel("Back")
       .accessibilityHint("Go back to the previous screen.")
       .accessibilitySortPriority(1)
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.accessibilitySortPriority: "1", DesignReviewToolkit.AccessibilityType.accessibilityHint: "\"Go back to the previous screen.\"", DesignReviewToolkit.AccessibilityType.accessibilityLabel: "\"Back\""], style: [:], depth: 1))
-
 
       Spacer()
       
@@ -96,14 +89,10 @@ public struct DemoView3: View {
           .padding(8)
           .background(.black.opacity(0.4))
           .clipShape(Circle())
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [:], style: [DesignReviewToolkit.StyleType.font: ".title2", DesignReviewToolkit.StyleType.background: ".black.opacity(0.4)", DesignReviewToolkit.StyleType.padding: "8"], depth: 2))
-
 
       }
       .accessibilityLabel("Search")
       .accessibilitySortPriority(2)
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.accessibilitySortPriority: "2", DesignReviewToolkit.AccessibilityType.accessibilityLabel: "\"Search\""], style: [:], depth: 1))
-
 
       Button {
         // more
@@ -114,20 +103,14 @@ public struct DemoView3: View {
           .padding(8)
           .background(.black.opacity(0.4))
           .clipShape(Circle())
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [:], style: [DesignReviewToolkit.StyleType.padding: "8", DesignReviewToolkit.StyleType.font: ".title2", DesignReviewToolkit.StyleType.background: ".black.opacity(0.4)"], depth: 2))
-
 
       }
       .accessibilityLabel("More options")
       .accessibilitySortPriority(3)
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.accessibilitySortPriority: "3", DesignReviewToolkit.AccessibilityType.accessibilityLabel: "\"More options\""], style: [:], depth: 1))
-
 
     }
     .foregroundColor(.white)
     .padding(.top, 12)
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [:], style: [DesignReviewToolkit.StyleType.padding: "12"], depth: 0))
-
 
   }
   
@@ -144,8 +127,6 @@ public struct DemoView3: View {
       }
       .foregroundColor(.white)
       .padding(.trailing, 4)
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [:], style: [DesignReviewToolkit.StyleType.padding: "4"], depth: 1))
-
 
     }
   }
@@ -158,13 +139,9 @@ public struct DemoView3: View {
       VStack(spacing: 4) {
         Image(systemName: isLiked ? "hand.thumbsup.fill" : "hand.thumbsup")
           .font(.system(size: 28))
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [:], style: [DesignReviewToolkit.StyleType.font: ".system(size: 28)"], depth: 2))
-
 
         Text("\(video.likeCount.formatted())")
           .font(.caption)
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.text: "\"\\(video.likeCount.formatted())\""], style: [DesignReviewToolkit.StyleType.font: ".caption"], depth: 2))
-
 
       }
     }
@@ -172,8 +149,6 @@ public struct DemoView3: View {
     .accessibilityValue(isLiked ? "On" : "Off")
     .accessibilityHint("Double-tap to toggle like.")
     .accessibilitySortPriority(1)
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.accessibilitySortPriority: "1", DesignReviewToolkit.AccessibilityType.accessibilityValue: "isLiked ? \"On\" : \"Off\"", DesignReviewToolkit.AccessibilityType.accessibilityLabel: "\"Like video\"", DesignReviewToolkit.AccessibilityType.accessibilityHint: "\"Double-tap to toggle like.\""], style: [:], depth: 0))
-
 
   }
   
@@ -185,13 +160,9 @@ public struct DemoView3: View {
       VStack(spacing: 4) {
         Image(systemName: isDisliked ? "hand.thumbsdown.fill" : "hand.thumbsdown")
           .font(.system(size: 28))
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [:], style: [DesignReviewToolkit.StyleType.font: ".system(size: 28)"], depth: 2))
-
 
         Text("Dislike")
           .font(.caption)
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.text: "\"Dislike\""], style: [DesignReviewToolkit.StyleType.font: ".caption"], depth: 2))
-
 
       }
     }
@@ -199,8 +170,6 @@ public struct DemoView3: View {
     .accessibilityValue(isDisliked ? "On" : "Off")
     .accessibilityHint("Double-tap to toggle dislike.")
     .accessibilitySortPriority(2)
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.accessibilityLabel: "\"Dislike video\"", DesignReviewToolkit.AccessibilityType.accessibilityHint: "\"Double-tap to toggle dislike.\"", DesignReviewToolkit.AccessibilityType.accessibilityValue: "isDisliked ? \"On\" : \"Off\"", DesignReviewToolkit.AccessibilityType.accessibilitySortPriority: "2"], style: [:], depth: 0))
-
 
   }
   
@@ -211,20 +180,14 @@ public struct DemoView3: View {
       VStack(spacing: 4) {
         Image(systemName: "text.bubble")
           .font(.system(size: 28))
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [:], style: [DesignReviewToolkit.StyleType.font: ".system(size: 28)"], depth: 2))
-
 
         Text("\(video.commentCount)")
           .font(.caption)
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.text: "\"\\(video.commentCount)\""], style: [DesignReviewToolkit.StyleType.font: ".caption"], depth: 2))
-
 
       }
     }
     .accessibilityLabel("Comments")
     .accessibilityHint("Double-tap to open comments.")
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.accessibilityLabel: "\"Comments\"", DesignReviewToolkit.AccessibilityType.accessibilityHint: "\"Double-tap to open comments.\""], style: [:], depth: 0))
-
 
   }
   
@@ -235,20 +198,14 @@ public struct DemoView3: View {
       VStack(spacing: 4) {
         Image(systemName: "arrowshape.turn.up.right")
           .font(.system(size: 28))
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [:], style: [DesignReviewToolkit.StyleType.font: ".system(size: 28)"], depth: 2))
-
 
         Text("\(video.shareCount)")
           .font(.caption)
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.text: "\"\\(video.shareCount)\""], style: [DesignReviewToolkit.StyleType.font: ".caption"], depth: 2))
-
 
       }
     }
     .accessibilityLabel("Share video")
     .accessibilityHint("Double-tap to share this video.")
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.accessibilityHint: "\"Double-tap to share this video.\"", DesignReviewToolkit.AccessibilityType.accessibilityLabel: "\"Share video\""], style: [:], depth: 0))
-
 
   }
   
@@ -258,13 +215,9 @@ public struct DemoView3: View {
     } label: {
       Image(systemName: "arrow.triangle.2.circlepath.camera")
         .font(.system(size: 26))
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [:], style: [DesignReviewToolkit.StyleType.font: ".system(size: 26)"], depth: 1))
-
 
     }
     .accessibilityLabel("More camera options")
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.accessibilityLabel: "\"More camera options\""], style: [:], depth: 0))
-
 
   }
   
@@ -280,16 +233,12 @@ public struct DemoView3: View {
 
           )
           .accessibilityHidden(true)
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.accessibilityHidden: "true"], style: [DesignReviewToolkit.StyleType.fill: ".white.opacity(0.7)"], depth: 2))
-
 
         VStack(alignment: .leading, spacing: 2) {
           Text(video.creatorHandle)
             .font(.subheadline.bold())
             .font(.caption)
             .foregroundStyle(.secondary)
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.text: "video.creatorHandle"], style: [DesignReviewToolkit.StyleType.font: ".caption", DesignReviewToolkit.StyleType.foregroundStyle: ".secondary"], depth: 3))
-
 
         }
         
@@ -305,14 +254,10 @@ public struct DemoView3: View {
             .background(isSubscribed ? .gray.opacity(0.6) : .white)
             .foregroundColor(isSubscribed ? .white : .black)
             .clipShape(Capsule())
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.text: "isSubscribed ? \"Subscribed\" : \"Subscribe\""], style: [DesignReviewToolkit.StyleType.padding: "6", DesignReviewToolkit.StyleType.font: ".subheadline.bold()", DesignReviewToolkit.StyleType.background: "isSubscribed ? .gray.opacity(0.6) : .white"], depth: 3))
-
 
         }
         .accessibilityLabel(isSubscribed ? "Subscribed to \(video.creatorName)" : "Subscribe to \(video.creatorName)")
         .accessibilityHint("Double-tap to toggle subscription.")
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.accessibilityHint: "\"Double-tap to toggle subscription.\"", DesignReviewToolkit.AccessibilityType.accessibilityLabel: "isSubscribed ? \"Subscribed to \\(video.creatorName)\" : \"Subscribe to \\(video.creatorName)\""], style: [:], depth: 2))
-
 
       }
       
@@ -320,15 +265,11 @@ public struct DemoView3: View {
         Text(video.title)
           .font(.subheadline)
           .lineLimit(2)
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.text: "video.title"], style: [DesignReviewToolkit.StyleType.font: ".subheadline"], depth: 2))
-
 
         Text("How to create re-usable glass effect components")
           .font(.caption)
           .foregroundStyle(.secondary)
           .lineLimit(1)
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.text: "\"How to create re-usable glass effect components\""], style: [DesignReviewToolkit.StyleType.font: ".caption", DesignReviewToolkit.StyleType.foregroundStyle: ".secondary"], depth: 2))
-
 
       }
       .frame(maxWidth: .infinity, alignment: .leading)
@@ -359,8 +300,6 @@ public struct DemoView3: View {
       .ignoresSafeArea(edges: .bottom)
     )
     .accessibilityElement(children: .contain)
-.modifier(DesignReviewToolkit.CustomAccessibilityModifier(accessibility: [DesignReviewToolkit.AccessibilityType.accessibilityElement: ".contain"], style: [DesignReviewToolkit.StyleType.background: "LinearGradient(\n        colors: [Color.black.opacity(0.6), .clear],\n        startPoint: .bottom,\n        endPoint: .top\n      )\n      .ignoresSafeArea(edges: .bottom)", DesignReviewToolkit.StyleType.padding: "4"], depth: 0))
-
 
   }
   

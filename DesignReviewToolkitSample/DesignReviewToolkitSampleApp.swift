@@ -8,7 +8,7 @@ import SwiftUI
 struct DesignReviewToolkitSampleApp: App {
   var body: some Scene {
     WindowGroup {
-      DemoView1()
+      DemoView2()
     }
   }
 }
